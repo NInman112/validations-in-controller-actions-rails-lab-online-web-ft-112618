@@ -3,6 +3,11 @@ class Author < ActiveRecord::Base
   validates :email, uniqueness: true
 
   def create
-    
+    @author = Author.new(params)
+    if @author.valid?
+      @author.save
+    else 
+      render :new
+    end 
   end
 end
