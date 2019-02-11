@@ -4,9 +4,9 @@ class Author < ActiveRecord::Base
 
   def self.create
 
-  end 
+  end
 
   def self.update
 
-  end 
+  end
 end
