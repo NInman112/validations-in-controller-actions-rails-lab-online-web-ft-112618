@@ -2,7 +2,7 @@ class Author < ActiveRecord::Base
   validates :name, presence: true
   validates :email, uniqueness: true
 
-  def create
+  def self.create
     @author = Author.new(params)
     if @author.valid?
       @author.save
