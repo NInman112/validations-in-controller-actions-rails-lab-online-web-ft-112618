@@ -6,6 +6,7 @@ class Author < ActiveRecord::Base
     @author = Author.new(params)
     if @author.valid?
       @author.save
+      redirect_to author_path(@author)
     else 
       render :new
     end 
