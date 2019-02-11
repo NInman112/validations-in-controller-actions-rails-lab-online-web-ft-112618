@@ -8,7 +8,7 @@ class Author < ActiveRecord::Base
       @author.save
       redirect_to author_path(@author)
     else
-      render :new
+      render :'authors/new'
     end
   end
 end
